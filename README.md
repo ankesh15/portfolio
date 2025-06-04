@@ -23,7 +23,7 @@ Follow these steps to get the project up and running on your local machine:
     git clone <https://github.com/ankesh15/portfolio>
     cd portfolio
     ```
-    Replace `<repository_url>` with the actual URL of your repository.
+   
 
 2.  **Install dependencies:**
 
