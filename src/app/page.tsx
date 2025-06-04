@@ -1,103 +1,252 @@
+'use client';
+
 import Image from "next/image";
+import { Parallax } from 'react-parallax';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+const name = "ANKESH SINGH";
+
+const letterAnimation = {
+  initial: { y: 400 },
+  animate: (i: number) => ({
+    y: 0,
+    transition: {
+      delay: i * 0.05,
+      duration: 0.25,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  }),
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-white overflow-hidden">
+      {/* Hero Section with Parallax */}
+      <div className="relative bg-white">
+        <Parallax
+          blur={0}
+          bgImage="/images/about-bg.jpg"
+          bgImageAlt="Hero background"
+          strength={300}
+          className="h-screen"
+          bgClassName="!bg-white"
+        >
+          <div className="relative h-screen flex items-center justify-center bg-white/30">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+                {/* Left side - Name and Title */}
+                <motion.div 
+                  className="flex-1 text-left bg-white/70 p-8 rounded-lg shadow-xl"
+                  initial={{ opacity: 0, x: -100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <div className="h-[120px] overflow-hidden">
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 drop-shadow-lg">
+                      {name.split("").map((letter, index) => (
+                        <motion.span
+                          key={index}
+                          custom={index}
+                          variants={letterAnimation}
+                          initial="initial"
+                          animate="animate"
+                          className="inline-block"
+                        >
+                          {letter === " " ? "\u00A0" : letter}
+                        </motion.span>
+                      ))}
+                    </h1>
+                  </div>
+                  <motion.p 
+                    className="text-xl md:text-2xl mb-8 text-gray-700 drop-shadow-md"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.5, duration: 0.8 }}
+                  >
+                    I&apos;m Ankesh Singh, a BTech Computer Science student passionate about software and web development. I enjoy building dynamic web applications, solving algorithmic problems, and constantly learning new technologies. I&apos;m also active on platforms like LeetCode and Codeforces to sharpen my problem-solving skills. Currently, I&apos;m exploring full-stack development and contributing to open-source projects.
+                  </motion.p>
+                  <motion.div 
+                    className="flex gap-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.8, duration: 0.8 }}
+                  >
+                    <Link
+                      href="/contact"
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-colors shadow-lg"
+                    >
+                      Contact Me
+                    </Link>
+                    <Link
+                      href="/portfolio"
+                      className="bg-white/90 hover:bg-white text-gray-900 px-8 py-3 rounded-full transition-colors shadow-lg"
+                    >
+                      View Work
+                    </Link>
+                  </motion.div>
+                </motion.div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+                {/* Right side - Profile Image */}
+                <motion.div 
+                  className="flex-1 flex justify-center"
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 1.2 }}
+                >
+                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <Image
+                      src="/images/profile.jpg"
+                      alt="Your Name"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </Parallax>
+      </div>
+
+      {/* Skills Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">My Skills</h2>
+            <p className="text-xl text-gray-600">Technologies I work with</p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+               { name: 'Languages', skills: ['JavaScript', 'Python', 'C++','C','Go'] }
+              ,{ name: 'Frontend', skills: ['React.js', 'Next.js', 'Tailwind CSS', 'TypeScript'] },
+              { name: 'Backend', skills: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs'] },
+              { name: 'Tools', skills: ['Git', 'VS Code', 'Figma', 'Postman','Docker','Kubernetes'] },
+              { name: 'Other', skills: ['Responsive Design', 'UI/UX', 'Testing', 'Deployment'] },
+             
+            ].map((category, index) => (
+              <motion.div
+                key={category.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{category.name}</h3>
+                <ul className="space-y-2">
+                  {category.skills.map((skill) => (
+                    <li key={skill} className="text-gray-600 flex items-center">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Quick Links Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Explore More</h2>
+            <p className="text-xl text-gray-600">Discover more about my work and experience</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/about" className="group">
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow"
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors">
+                  <svg
+                    className="w-8 h-8 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">About Me</h3>
+                <p className="text-gray-600">Learn more about my journey and expertise</p>
+              </motion.div>
+            </Link>
+
+            <Link href="/portfolio" className="group">
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow"
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors">
+                  <svg
+                    className="w-8 h-8 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">My Work</h3>
+                <p className="text-gray-600">Explore my latest projects and achievements</p>
+              </motion.div>
+            </Link>
+
+            <Link href="/contact" className="group">
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow"
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors">
+                  <svg
+                    className="w-8 h-8 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>
+                <p className="text-gray-600">Get in touch for collaborations and opportunities</p>
+              </motion.div>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
