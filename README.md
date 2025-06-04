@@ -20,7 +20,7 @@ Follow these steps to get the project up and running on your local machine:
 1.  **Clone the repository:**
 
     ```bash
-    git clone <repository_url>
+    git clone <https://github.com/ankesh15/portfolio>
     cd portfolio
     ```
     Replace `<repository_url>` with the actual URL of your repository.
