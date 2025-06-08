@@ -21,7 +21,7 @@ const letterAnimation = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white overflow-hidden">
+    <main className="min-h-screen bg-white overflow-hidden pt-16 md:pt-16">
       {/* Hero Section with Parallax */}
       <div className="relative bg-white">
         <Parallax
@@ -29,21 +29,38 @@ export default function Home() {
           bgImage="/images/about-bg.jpg"
           bgImageAlt="Hero background"
           strength={300}
-          className="h-screen"
+          className="min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-4rem)]"
           bgClassName="!bg-white"
         >
-          <div className="relative h-screen flex items-center justify-center bg-white/30">
-            <div className="container mx-auto px-4">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="relative min-h-full flex items-center justify-center bg-white/30 py-16 md:py-8">
+            <div className="container mx-auto px-4 py-8 md:py-0">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                {/* Profile Image - Shown first on mobile */}
+                <motion.div 
+                  className="flex-1 flex justify-center order-first md:order-last"
+                  initial={{ opacity: 0, y: -50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                >
+                  <div className="relative w-48 h-48 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <Image
+                      src="/images/profile.jpg"
+                      alt="Your Name"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </motion.div>
+
                 {/* Left side - Name and Title */}
                 <motion.div 
-                  className="flex-1 text-left bg-white/70 p-8 rounded-lg shadow-xl"
+                  className="flex-1 text-left bg-white/70 p-4 md:p-8 rounded-lg shadow-xl w-full order-last md:order-first"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
                 >
-                  <div className="h-[120px] overflow-hidden">
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 drop-shadow-lg">
+                  <div className="h-[100px] md:h-[120px] overflow-hidden">
+                    <h1 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6 text-gray-900 drop-shadow-lg">
                       {name.split("").map((letter, index) => (
                         <motion.span
                           key={index}
@@ -59,7 +76,7 @@ export default function Home() {
                     </h1>
                   </div>
                   <motion.p 
-                    className="text-xl md:text-2xl mb-8 text-gray-700 drop-shadow-md"
+                    className="text-lg md:text-2xl mb-6 md:mb-8 text-gray-700 drop-shadow-md"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5, duration: 0.8 }}
@@ -67,7 +84,7 @@ export default function Home() {
                     I&apos;m Ankesh Singh, a BTech Computer Science student passionate about software and web development. I enjoy building dynamic web applications, solving algorithmic problems, and constantly learning new technologies. I&apos;m also active on platforms like LeetCode and Codeforces to sharpen my problem-solving skills. Currently, I&apos;m exploring full-stack development and contributing to open-source projects.
                   </motion.p>
                   <motion.div 
-                    className="flex gap-4"
+                    className="flex flex-wrap gap-4"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.8, duration: 0.8 }}
@@ -85,23 +102,6 @@ export default function Home() {
                       View Work
                     </Link>
                   </motion.div>
-                </motion.div>
-
-                {/* Right side - Profile Image */}
-                <motion.div 
-                  className="flex-1 flex justify-center"
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 1.2 }}
-                >
-                  <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                    <Image
-                      src="/images/profile.jpg"
-                      alt="Your Name"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
                 </motion.div>
               </div>
             </div>

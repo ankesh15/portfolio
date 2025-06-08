@@ -81,7 +81,7 @@ export default function Contact() {
               className="text-center mb-16"
             >
               <h1 className="text-5xl font-bold text-gray-900 mb-4">Get In Touch</h1>
-              <p className="text-xl text-gray-600">Let's discuss your next project</p>
+              <p className="text-xl text-gray-600">Let&apos;s discuss your next project</p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
