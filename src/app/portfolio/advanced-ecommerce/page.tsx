@@ -157,7 +157,7 @@ export default function AdvancedEcommercePage() {
                 {/* Links */}
                 <section className="flex flex-col md:flex-row gap-4 items-center justify-center">
                     <a
-                        href="https://github.com/harshmriduhash/Advance-Ecommerce"
+                        href=""
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-md transition"
