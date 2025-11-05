@@ -161,12 +161,12 @@ export default function FoodDistributionPage() {
                     </a>
 
                     <a
-                        href="#"
+                        href="https://food-distribution-platform.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-md shadow-md transition"
                     >
-                        Live Demo (coming soon)
+                        LIVE DEMO
                     </a>
 
                     <Link
