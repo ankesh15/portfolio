@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Mail, MapPin, Award, Code2, Terminal, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Download, Mail, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './UI/SocialIcons';
 
 export const Hero = ({ onOpenResume }) => {
@@ -11,7 +11,7 @@ export const Hero = ({ onOpenResume }) => {
       <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-purple-500/10 dark:bg-purple-600/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Main Hero Information Column */}
           <motion.div
@@ -63,8 +63,13 @@ export const Hero = ({ onOpenResume }) => {
               </a>
             </div>
 
+            {/* Mobile Profile Photo Placement (between Buttons and Social Links) */}
+            <div className="block lg:hidden my-6">
+              <ProfilePhotoFrame className="w-48 h-48 sm:w-56 sm:h-56 mx-auto" />
+            </div>
+
             {/* Social Links */}
-            <div className="flex items-center gap-6 pt-4 text-slate-500 dark:text-slate-400">
+            <div className="flex items-center gap-6 pt-2 lg:pt-4 text-slate-500 dark:text-slate-400">
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500">Connect:</span>
               
               <a
@@ -100,78 +105,39 @@ export const Hero = ({ onOpenResume }) => {
             </div>
           </motion.div>
 
-          {/* Right Column Professional Highlights Card */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5"
-          >
-            <div className="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6 text-left relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-bl-full pointer-events-none"></div>
-
-              {/* Profile Card Header */}
-              <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
-                <div>
-                  <h3 className="font-bold text-slate-900 dark:text-white text-base">Key Highlights</h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400">Computer Science & Engineering</p>
-                </div>
-                <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/40">
-                  CGPA: 8.52
-                </span>
-              </div>
-
-              {/* Verified Metrics Badges */}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
-                  <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-1">
-                    <Code2 className="w-4 h-4" />
-                    <span className="text-xs font-semibold">LeetCode</span>
-                  </div>
-                  <div className="text-lg font-extrabold text-slate-900 dark:text-white font-mono">715+</div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">Peak Rating: 1792+</div>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/60">
-                  <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-1">
-                    <Award className="w-4 h-4" />
-                    <span className="text-xs font-semibold">Meta Hacker Cup</span>
-                  </div>
-                  <div className="text-lg font-extrabold text-slate-900 dark:text-white font-mono">Round 2</div>
-                  <div className="text-[11px] text-slate-500 dark:text-slate-400">2024 Qualifier</div>
-                </div>
-              </div>
-
-              {/* Core Skill Pills */}
-              <div className="space-y-2 pt-1">
-                <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block">Primary Competencies</span>
-                <div className="flex flex-wrap gap-1.5">
-                  {['React.js', 'Node.js', 'Express.js', 'MongoDB', 'C++', 'Data Structures', 'REST APIs', 'Tailwind CSS'].map((tech) => (
-                    <span key={tech} className="px-2 py-1 text-xs rounded-md bg-slate-100 dark:bg-slate-800 font-medium text-slate-700 dark:text-slate-300">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Quick Resume Link Footnote */}
-              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                <span className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-medium">
-                  <CheckCircle2 className="w-4 h-4" /> Verified Credentials
-                </span>
-                <button
-                  onClick={onOpenResume}
-                  className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
-                >
-                  Quick Resume View
-                </button>
-              </div>
-
-            </div>
-          </motion.div>
+          {/* Right Column Profile Photo Column (Desktop lg+) */}
+          <div className="hidden lg:flex lg:col-span-5 justify-center items-center">
+            <ProfilePhotoFrame className="w-72 h-72 xl:w-80 xl:h-80" />
+          </div>
 
         </div>
       </div>
     </section>
   );
 };
+
+// Circular Profile Photo Component
+const ProfilePhotoFrame = ({ className = '' }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95, y: 12 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.15 }}
+      className={`relative group shrink-0 ${className}`}
+    >
+      {/* Outer subtle accent ring */}
+      <div className="w-full h-full p-2 rounded-full bg-gradient-to-tr from-indigo-500/15 via-purple-500/10 to-indigo-500/15 dark:from-indigo-500/25 dark:via-purple-500/15 dark:to-indigo-500/25 border border-indigo-200/60 dark:border-indigo-800/40 shadow-xl shadow-indigo-500/5 dark:shadow-indigo-950/20">
+        {/* Inner photo container */}
+        <div className="w-full h-full rounded-full overflow-hidden aspect-square border-2 border-white dark:border-slate-800 shadow-md">
+          <img
+            src="/profile.jpg"
+            alt="Ankesh Singh"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
