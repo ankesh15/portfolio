@@ -38,6 +38,7 @@ export const achievementsData = [
     title: 'Meta Hacker Cup 2024 — Round 2 Qualifier',
     category: 'Competitive Programming',
     description: 'Advanced to Round 2 of Meta Hacker Cup 2024. Ranked 2,521st in Round 1 and 3,636th globally in Round 2.',
+    certificateUrl: 'https://www.facebook.com/codingcompetitions/hacker-cup/2024/certificate/855493433378513',
     year: '2024',
     highlight: true
   },

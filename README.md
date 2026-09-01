@@ -225,5 +225,5 @@ The portfolio is deployed on **Vercel**:
 ## Contact
 
 - **GitHub**: [https://github.com/ankesh15](https://github.com/ankesh15)
-- **LinkedIn**: [https://linkedin.com/in/ankeshsingh](https://linkedin.com/in/ankeshsingh)
+- **LinkedIn**: [https://www.linkedin.com/in/ankesh-singh-3b8b8728a/](https://www.linkedin.com/in/ankesh-singh-3b8b8728a/)
 - **Email**: [singhankesh672@gmail.com](mailto:singhankesh672@gmail.com)

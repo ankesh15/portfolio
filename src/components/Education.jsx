@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { educationData, achievementsData } from '../data/education';
-import { GraduationCap, Award, Calendar, CheckCircle2, Sparkles } from 'lucide-react';
+import { GraduationCap, Award, Calendar, CheckCircle2, Sparkles, ExternalLink } from 'lucide-react';
 
 export const Education = () => {
   return (
@@ -112,6 +112,20 @@ export const Education = () => {
                     <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                       {item.description}
                     </p>
+
+                    {item.certificateUrl && (
+                      <div className="pt-2">
+                        <a
+                          href={item.certificateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 transition-colors"
+                        >
+                          <span>View Certificate</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}

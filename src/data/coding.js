@@ -7,7 +7,7 @@ export const codingData = {
       solved: '715+ Solved',
       metricLabel: 'Peak Contest Rating',
       badge: 'Active Solver',
-      url: 'https://leetcode.com/u/ankesh15/',
+      url: 'https://leetcode.com/u/APS_coder01/',
       accent: 'from-amber-500/20 to-yellow-500/10',
       icon: 'Code'
     },
@@ -17,7 +17,7 @@ export const codingData = {
       solved: '2-Star Coder',
       metricLabel: 'Peak Contest Rating',
       badge: '2-Star',
-      url: 'https://www.codechef.com/users/ankesh15',
+      url: 'https://www.codechef.com/users/aps_coder01',
       accent: 'from-amber-700/20 to-orange-600/10',
       icon: 'Trophy'
     },
@@ -41,8 +41,8 @@ export const codingData = {
     'C++ Standard Template Library (STL)'
   ],
   socials: [
-    { label: 'LeetCode Profile', url: 'https://leetcode.com/u/ankesh15/' },
-    { label: 'CodeChef Profile', url: 'https://www.codechef.com/users/ankesh15' },
+    { label: 'LeetCode Profile', url: 'https://leetcode.com/u/APS_coder01/' },
+    { label: 'CodeChef Profile', url: 'https://www.codechef.com/users/aps_coder01' },
     { label: 'GitHub Repositories', url: 'https://github.com/ankesh15' }
   ]
 };

@@ -12,7 +12,7 @@ export const Hero = ({ onOpenResume }) => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          
+
           {/* Main Hero Information Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export const Hero = ({ onOpenResume }) => {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-              I build full-stack web applications and developer-focused tools using modern JavaScript technologies, while solving algorithmic problems with C++ and Data Structures & Algorithms.
+              I’m a Computer Science student at IIIT Agartala focused on full-stack development, AI, and problem solving. I enjoy building practical web applications, exploring AI-powered solutions, and working with technologies across the frontend, backend, and data layer. I also regularly challenge myself with C++ and Data Structures & Algorithms.
             </p>
 
             {/* Action Buttons */}
@@ -71,7 +71,7 @@ export const Hero = ({ onOpenResume }) => {
             {/* Social Links */}
             <div className="flex items-center gap-6 pt-2 lg:pt-4 text-slate-500 dark:text-slate-400">
               <span className="text-xs uppercase tracking-wider font-semibold text-slate-400 dark:text-slate-500">Connect:</span>
-              
+
               <a
                 href="https://github.com/ankesh15"
                 target="_blank"
@@ -84,7 +84,7 @@ export const Hero = ({ onOpenResume }) => {
               </a>
 
               <a
-                href="https://linkedin.com/in/ankeshsingh"
+                href="https://www.linkedin.com/in/ankesh-singh-3b8b8728a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm font-medium hover:text-indigo-600 dark:hover:text-white transition-colors"

@@ -80,6 +80,15 @@ export const Coding = () => {
                 <span className="text-[11px] text-indigo-200 block font-medium">Global Round 2 Rank</span>
                 <span className="text-xl font-bold font-mono text-amber-300">3,636th</span>
               </div>
+              <a
+                href="https://www.facebook.com/codingcompetitions/hacker-cup/2024/certificate/855493433378513"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/15 text-xs font-semibold text-white transition-all flex items-center gap-1.5 shadow-sm"
+              >
+                <span>View Certificate</span>
+                <ExternalLink className="w-3.5 h-3.5 text-amber-300" />
+              </a>
             </div>
           </div>
         </motion.div>

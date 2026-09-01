@@ -35,7 +35,7 @@ export const Footer = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/ankeshsingh"
+              href="https://www.linkedin.com/in/ankesh-singh-3b8b8728a/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-indigo-600 dark:hover:text-white transition-colors flex items-center gap-1.5"
