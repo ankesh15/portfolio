@@ -22,7 +22,6 @@ export const Hero = ({ onOpenResume }) => {
           >
             {/* Status Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/60 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping shrink-0"></span>
               <span>B.Tech CSE @ IIIT Agartala</span>
               <span className="text-slate-400">·</span>
               <span className="flex items-center gap-1"><MapPin className="w-3 h-3 inline text-indigo-500" /> India</span>

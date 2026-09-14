@@ -47,7 +47,6 @@ export const Navbar = () => {
               <Terminal className="w-4 h-4" />
             </div>
             <span>Ankesh Singh</span>
-            <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse ml-0.5" title="Available for opportunities"></span>
           </a>
 
           {/* Desktop Navigation Links */}
