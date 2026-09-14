@@ -1,15 +1,48 @@
 export const projectsData = [
   {
+    id: 'alex',
+    title: 'ALEX',
+    tagline: 'AI Knowledge & Research Assistant',
+    description: 'A document-grounded AI knowledge and research assistant built around a RAG pipeline for asking questions over uploaded documents.',
+    features: [
+      'Engineered a document-grounded RAG pipeline using LangGraph, FastAPI, and Google Gemini with conditional retrieval and fallback handling when relevant context is unavailable.',
+      'Implemented semantic document retrieval using FastEmbed with BAAI/bge-small-en-v1.5 embeddings and PostgreSQL with pgvector using cosine-distance search.',
+      'Built document processing for PDF, DOCX, and TXT files with automated chunking, 384-dimensional embeddings, page-level metadata, and structured source citations.',
+      'Built the frontend using React, Vite, and Tailwind CSS and deployed the application using Docker, Railway, and Vercel.'
+    ],
+    tech: [
+      'Python',
+      'FastAPI',
+      'LangGraph',
+      'Google Gemini',
+      'FastEmbed',
+      'PostgreSQL',
+      'pgvector',
+      'React.js',
+      'Vite',
+      'Tailwind CSS',
+      'Docker',
+      'Railway',
+      'Vercel'
+    ],
+    github: 'https://github.com/ankesh15/ALEX',
+    demo: 'https://frontend-theta-navy-jhig45orrm.vercel.app',
+    featured: true,
+    isPrimary: true,
+    type: 'AI & RAG System',
+    accent: 'from-indigo-500/30 via-purple-500/20 to-indigo-600/30'
+  },
+  {
     id: 'food-distribution',
     title: 'Food Distribution Platform',
     tagline: 'MERN Surplus Food Collection & Pickup Management',
-    description: 'A MERN-stack platform connecting food donors with NGOs to streamline surplus food collection and pickup management.',
+    description: 'A full-stack MERN platform connecting food donors with NGOs and shelters to manage surplus-food donations, claims, and pickups.',
     features: [
-      'JWT-based authentication & role-based access control (Donor, NGO, Admin)',
-      'RESTful APIs securing backend endpoints and donation claims',
-      'Socket.io real-time communication for instant claims & live workflow tracking',
-      'Google Maps API integration for geolocation-based search',
-      'Twilio SMS notifications & Nodemailer automated event updates'
+      'Implemented JWT authentication with refresh tokens and RBAC across 3 roles: Donor, Recipient, and Admin.',
+      'Designed and integrated 19 REST API endpoints using Node.js, Express.js, MongoDB, and Mongoose.',
+      'Built real-time donation tracking using Socket.io with 4 workflow states: Available, Claimed, Picked-up, and Completed.',
+      'Integrated Google Maps, Twilio SMS, and Nodemailer for location-based matching and automated notifications.',
+      'Added security measures including input validation, rate limiting, Helmet, and CORS.'
     ],
     tech: [
       'MongoDB',
@@ -18,91 +51,17 @@ export const projectsData = [
       'Node.js',
       'Socket.io',
       'JWT',
-      'Material UI',
+      'Mongoose',
+      'Material-UI',
       'Google Maps API',
       'Twilio',
       'Nodemailer'
     ],
     github: 'https://github.com/ankesh15/Food-Distribution-Platform',
-    demo: 'https://food-distribution-platform.vercel.app',
-    image: 'https://raw.githubusercontent.com/ankesh15/Food-Distribution-Platform/main/image.png',
+    demo: 'https://food-distribution-platform.vercel.app/',
     featured: true,
-    type: 'MERN Stack Project',
-    accent: 'from-emerald-500/20 to-teal-500/10'
-  },
-  {
-    id: 'codershub',
-    title: 'CodersHub — Developer Analytics Platform',
-    tagline: 'Unified Developer Profile & Rating Showcase',
-    description: 'A developer analytics platform that consolidates developer metrics across LeetCode, Codeforces, and GitHub into a unified dashboard.',
-    features: [
-      'Developer profile aggregation across LeetCode, Codeforces, and GitHub',
-      'Coding statistics & problem-solving distribution visualization',
-      'Contest rating history & repository activity tracking',
-      'Interactive charts powered by Recharts with Axios client-side fetching'
-    ],
-    tech: [
-      'React.js',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'Mongoose',
-      'Tailwind CSS',
-      'Vite',
-      'Recharts',
-      'Axios'
-    ],
-    github: 'https://github.com/ankesh15/CodersHub',
-    demo: null,
-    image: 'https://github.com/user-attachments/assets/53abaf11-a04a-4008-b7e4-b3002a7c4dde',
-    featured: true,
-    type: 'Full-Stack Analytics',
-    accent: 'from-blue-500/20 to-indigo-500/10'
-  },
-  {
-    id: 'code-reviewer-ai',
-    title: 'Code Reviewer AI',
-    tagline: 'AI-Powered Automated Code Auditor',
-    description: 'AI-powered Python code reviewer built using Streamlit and Google Generative AI for automated code quality analysis and bug detection.',
-    features: [
-      'Automated Python code quality & security auditing',
-      'Bug detection with instant suggestions for fixes',
-      'AI-powered code review generated by Google Generative AI',
-      'Interactive Streamlit web interface'
-    ],
-    tech: [
-      'Python',
-      'Streamlit',
-      'Google Generative AI'
-    ],
-    github: 'https://github.com/ankesh15/Code-reviewer-ai',
-    demo: null,
-    image: 'https://github.com/user-attachments/assets/3317706e-a466-4b4e-8ad3-9cb5188bbe94',
-    featured: true,
-    type: 'AI & Python',
-    accent: 'from-purple-500/20 to-indigo-500/10'
-  },
-  {
-    id: 'portfolio',
-    title: 'Personal Portfolio',
-    tagline: 'Recruiter-Focused Developer Showcase',
-    description: 'Modern developer portfolio built with React, Vite, Tailwind CSS, and Framer Motion showcasing projects, DSA milestones, and academic background.',
-    features: [
-      'Dark and light theme toggling with smooth transitions',
-      'Responsive component layout optimized across mobile & desktop',
-      'Direct PDF resume download integration and clean UI'
-    ],
-    tech: [
-      'React.js',
-      'Vite',
-      'Tailwind CSS',
-      'Framer Motion'
-    ],
-    github: 'https://github.com/ankesh15/portfolio',
-    demo: 'https://portfolio-6y8h.vercel.app/',
-    image: null,
-    featured: false,
-    type: 'Frontend & UI',
-    accent: 'from-amber-500/20 to-orange-500/10'
+    isPrimary: false,
+    type: 'Full-Stack MERN Platform',
+    accent: 'from-blue-500/30 via-indigo-500/20 to-cyan-500/30'
   }
 ];

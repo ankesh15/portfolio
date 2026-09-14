@@ -28,18 +28,21 @@ export const Hero = ({ onOpenResume }) => {
             </div>
 
             {/* Headline */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
                 ANKESH SINGH
               </h1>
               <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-400 bg-clip-text text-transparent">
-                Full-Stack Developer
+                AI & Full-Stack Developer
               </h2>
+              <p className="text-sm sm:text-base font-semibold text-slate-600 dark:text-slate-400">
+                AI Engineer <span className="text-indigo-500">|</span> Full-Stack Developer <span className="text-indigo-500">|</span> C++ & DSA
+              </p>
             </div>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-              I’m a Computer Science student at IIIT Agartala focused on full-stack development, AI, and problem solving. I enjoy building practical web applications, exploring AI-powered solutions, and working with technologies across the frontend, backend, and data layer. I also regularly challenge myself with C++ and Data Structures & Algorithms.
+              I'm a Computer Science student at IIIT Agartala focused on AI engineering, full-stack development, and problem solving. I build practical AI-powered applications and scalable web systems using modern frontend, backend, databases, and AI technologies.
             </p>
 
             {/* Action Buttons */}
@@ -94,7 +97,7 @@ export const Hero = ({ onOpenResume }) => {
               </a>
 
               <a
-                href="mailto:singhankesh672@gmail.com"
+                href="mailto:ankeshsingh051@gmail.com"
                 className="flex items-center gap-2 text-sm font-medium hover:text-indigo-600 dark:hover:text-white transition-colors"
                 aria-label="Email Ankesh"
               >

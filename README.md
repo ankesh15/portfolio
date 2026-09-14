@@ -4,7 +4,7 @@
 ![Vite](https://img.shields.io/badge/Vite-8.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Personal portfolio website showcasing my skills, projects, competitive programming journey, achievements, and developer experience.
+Personal portfolio website showcasing my AI engineering projects, full-stack web applications, industry internship experience, competitive programming milestones, and academic background.
 
 ---
 
@@ -16,9 +16,9 @@ Personal portfolio website showcasing my skills, projects, competitive programmi
 
 ## About
 
-I am **Ankesh Singh**, a Computer Science & Engineering undergraduate at **Indian Institute of Information Technology Agartala (IIIT Agartala)** maintaining an **8.52 CGPA**.
+I am **Ankesh Singh**, an **AI & Full-Stack Developer** and Computer Science & Engineering undergraduate at **Indian Institute of Information Technology Agartala (IIIT Agartala)** maintaining an **8.52 CGPA**.
 
-My technical expertise centers on **Full-Stack Development** (MERN stack), designing robust RESTful APIs, and building AI-assisted tools. In competitive programming, I regularly practice Data Structures & Algorithms using C++, having solved over **715+ problems on LeetCode** and qualifying for **Round 2 of Meta Hacker Cup 2024**.
+My core focus centers on **AI Engineering** — particularly Retrieval-Augmented Generation (RAG), LLM applications, embeddings, and pgvector search — alongside building scalable full-stack web systems with React, FastAPI, and Node.js. In competitive programming, I solve Data Structures & Algorithms problems using C++, having solved over **715+ problems on LeetCode** and qualifying for **Round 2 of Meta Hacker Cup 2024**.
 
 ---
 
@@ -32,17 +32,16 @@ My technical expertise centers on **Full-Stack Development** (MERN stack), desig
 
 - **Responsive Layout**: Fluid design optimized across mobile (375px+), tablet, and desktop displays.
 - **Dark & Light Mode**: Theme toggling powered by React Context with `localStorage` state persistence.
-- **Smooth Scrolling Navigation**: Section linkage for seamless in-page scrolling.
-- **Hero Section**: Professional summary, social channels, and direct official PDF resume download.
-- **About Section**: Education background, academic metrics, and core development focus areas.
-- **Categorized Skills**: Technical stack grouped into Languages, Frontend, Backend, Databases, Tools, and CS Foundations.
-- **Featured Projects**: Verified project showcases with GitHub repository links and active deployment links.
-- **Competitive Programming & DSA**: Milestone cards featuring Meta Hacker Cup 2024, LeetCode, and CodeChef statistics.
-- **Education & Achievements**: Academic history timeline alongside GSSoC and coding honors.
-- **Contact Form & Direct Channels**: Client-side form validation and mailto draft generation.
+- **Smooth Scrolling Navigation**: Section linkage for seamless in-page scrolling including About, Experience, Projects, Skills, Coding, Education, and Contact.
+- **Hero Section**: Recruiter-focused introduction, quick social links, call-to-action buttons, and official PDF resume access.
+- **About Section**: Detailed background, academic metrics (8.52 CGPA), and primary focus areas (AI Engineering, Full-Stack Systems, DSA).
+- **Work Experience**: Industry software engineering internship at the Bureau of Indian Standards (BIS) featuring computer vision and real-time OCR testing systems.
+- **Featured Projects**: Verified AI knowledge assistant (ALEX) and full-stack MERN platform (Food Distribution Platform) with live deployment and repository links.
+- **Categorized Skills**: 8 structured matrices covering AI & ML, Languages, Backend & APIs, Databases, Frontend, Cloud & DevOps, Developer Tools, and Core CS.
+- **Competitive Programming & DSA**: Milestone cards featuring Meta Hacker Cup 2024, LeetCode (715+, 1792+), and CodeChef (1424+, 2-Star) statistics.
+- **Education & Achievements**: Academic history timeline alongside GSSoC open-source contributions.
+- **Contact Channels**: Direct email address (`ankeshsingh051@gmail.com`), verified social profiles, and interactive inquiry form.
 - **Interactive Resume Modal**: In-browser resume overview with direct PDF download button.
-- **Framer Motion Animations**: Micro-interactions and entry animations.
-- **SEO & Open Graph Metadata**: Configured title, meta description, and social graph tags in `index.html`.
 
 ---
 
@@ -64,45 +63,33 @@ My technical expertise centers on **Full-Stack Development** (MERN stack), desig
 
 ---
 
-## Portfolio Sections
+## Featured Experience
 
-- **Hero**: Introduction, professional title, quick social links, call-to-action buttons, and PDF resume access.
-- **About**: Education overview, CGPA, background summary, and engineering interests.
-- **Skills**: Skill matrices categorized by domain.
-- **Projects**: Curated full-stack, analytics, and AI applications sourced from active GitHub repositories.
-- **Coding & DSA**: DSA problem-solving statistics and competitive contest highlights.
-- **Achievements**: Recognized milestones including Meta Hacker Cup 2024 and GSSoC open-source contributions.
-- **Education**: Detailed academic background (IIIT Agartala & Amrit Public School).
-- **Contact**: Direct email address, verified social profiles, and interactive inquiry form.
+### Bureau of Indian Standards (BIS) — Software Engineering Intern
+*May 2026 – July 2026*
+- Developed a dual-camera computer vision system to automate monitoring of Lever Device tests for water bottles according to IS 17803, eliminating continuous manual observation during the 1,500-cycle, 70-minute test.
+- Implemented OCR-based real-time counter monitoring for machine cycle tracking and automated Pass/Fail decisions.
+- Built hinge and lid rupture detection using ROI-based image processing techniques to automatically identify test failures.
+- Created a multithreaded PyQt5 application with live monitoring, Pass/Fail alerts, and automated report generation.
+- **Technologies**: Python, PyQt5, OpenCV, Tesseract OCR, ReportLab, Multithreading.
 
 ---
 
 ## Featured Projects
 
+### ALEX — AI Knowledge & Research Assistant (Primary AI Project)
+A document-grounded AI knowledge and research assistant built around a RAG pipeline for asking questions over uploaded documents.
+- **Key Features**: Document-grounded RAG pipeline with LangGraph, FastAPI, and Google Gemini; semantic retrieval with FastEmbed and pgvector cosine search; multi-format document parsing (PDF, DOCX, TXT) with page-level citations; responsive React + Tailwind frontend.
+- **Technologies**: Python, FastAPI, LangGraph, Google Gemini, FastEmbed, PostgreSQL, pgvector, React.js, Vite, Tailwind CSS, Docker, Railway, Vercel.
+- **Repository**: [https://github.com/ankesh15/ALEX](https://github.com/ankesh15/ALEX)
+- **Live Demo**: [https://frontend-theta-navy-jhig45orrm.vercel.app](https://frontend-theta-navy-jhig45orrm.vercel.app)
+
 ### Food Distribution Platform
-A MERN-stack platform connecting food donors (restaurants, caterers) with local NGOs to schedule surplus food pickups and reduce waste.
-- **Key Features**: JWT authentication, role-based access control (Donor/NGO/Admin), REST APIs, Socket.io real-time claim tracking, Google Maps API geolocation search, Twilio SMS, and Nodemailer notifications.
-- **Technologies**: MongoDB, Express.js, React.js, Node.js, Socket.io, JWT, Material UI, Google Maps API, Twilio, Nodemailer.
+A full-stack MERN platform connecting food donors (restaurants, caterers) with local NGOs to schedule surplus food pickups and reduce waste.
+- **Key Features**: JWT authentication with refresh tokens and RBAC (Donor/Recipient/Admin); 19 REST API endpoints; Socket.io real-time donation tracking; Google Maps API geolocation search; Twilio SMS & Nodemailer notifications.
+- **Technologies**: MongoDB, Express.js, React.js, Node.js, Socket.io, JWT, Mongoose, Material-UI, Google Maps API, Twilio, Nodemailer.
 - **Repository**: [https://github.com/ankesh15/Food-Distribution-Platform](https://github.com/ankesh15/Food-Distribution-Platform)
-- **Live Demo**: [https://food-distribution-platform.vercel.app](https://food-distribution-platform.vercel.app)
-
-### CodersHub — Developer Analytics Platform
-A full-stack developer analytics platform designed to aggregate, track, and visualize coding statistics across LeetCode, Codeforces, and GitHub in a single dashboard.
-- **Key Features**: Developer handle profile aggregation, problem solve distribution charts, contest rating history tracking, and interactive dashboards.
-- **Technologies**: React.js, Node.js, Express.js, MongoDB, Mongoose, Tailwind CSS, Vite, Recharts, Axios.
-- **Repository**: [https://github.com/ankesh15/CodersHub](https://github.com/ankesh15/CodersHub)
-
-### Code Reviewer AI
-An AI-powered Python code review application designed to analyze source code for bugs, style issues, and security vulnerabilities.
-- **Key Features**: Automated Python code quality analysis, bug detection, and AI-powered refactoring suggestions.
-- **Technologies**: Python, Streamlit, Google Generative AI.
-- **Repository**: [https://github.com/ankesh15/Code-reviewer-ai](https://github.com/ankesh15/Code-reviewer-ai)
-
-### Personal Developer Portfolio
-Recruiter-focused personal portfolio website built to showcase projects, algorithmic problem-solving milestones, and academic background.
-- **Technologies**: React.js, Vite, Tailwind CSS, Framer Motion.
-- **Repository**: [https://github.com/ankesh15/portfolio](https://github.com/ankesh15/portfolio)
-- **Live Demo**: [https://portfolio-6y8h.vercel.app/](https://portfolio-6y8h.vercel.app/)
+- **Live Demo**: [https://food-distribution-platform.vercel.app/](https://food-distribution-platform.vercel.app/)
 
 ---
 
@@ -111,114 +98,17 @@ Recruiter-focused personal portfolio website built to showcase projects, algorit
 ### LeetCode
 - **715+** problems solved
 - **1792+** peak contest rating
+- **Profile**: [https://leetcode.com/u/APS_coder01/](https://leetcode.com/u/APS_coder01/)
 
 ### CodeChef
 - **1424+** peak contest rating
 - **2-Star** Coder
+- **Profile**: [https://www.codechef.com/users/aps_coder01](https://www.codechef.com/users/aps_coder01)
 
 ### Meta Hacker Cup 2024
 - **Advanced to Round 2**
-- **2,521st** rank in Round 1
-- **3,636th** global rank in Round 2
-
-### Open Source
-- **GirlScript Summer of Code (GSSoC)**: Contributed to open-source software repositories by resolving frontend issues, enhancing documentation, and submitting peer-reviewed pull requests.
-
----
-
-## Education
-
-**Indian Institute of Information Technology Agartala**  
-B.Tech in Computer Science and Engineering  
-*2023 – 2027*  
-**CGPA: 8.52**
-
-**Amrit Public School**  
-Senior Secondary (XII)  
-*2021 – 2022*  
-**Percentage: 90.0%**
-
----
-
-## Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/ankesh15/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
-   Open your browser at `http://localhost:5173`.
-
----
-
-## Production Build
-
-To compile the application for production deployment:
-
-```bash
-npm run build
-```
-
-This generates optimized static bundles inside the `dist/` directory.
-
----
-
-## Project Structure
-
-```text
-portfolio/
-├── public/
-│   ├── Ankesh-Singh-Resume.pdf
-│   └── favicon.svg
-├── src/
-│   ├── assets/
-│   │   └── hero.png
-│   ├── components/
-│   │   ├── UI/
-│   │   │   └── SocialIcons.jsx
-│   │   ├── About.jsx
-│   │   ├── Coding.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Education.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── ProjectCard.jsx
-│   │   ├── Projects.jsx
-│   │   ├── ResumeModal.jsx
-│   │   └── Skills.jsx
-│   ├── context/
-│   │   └── ThemeContext.jsx
-│   ├── data/
-│   │   ├── coding.js
-│   │   ├── education.js
-│   │   ├── projects.js
-│   │   └── skills.js
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
-
----
-
-## Deployment
-
-The portfolio is deployed on **Vercel**:  
-**Live URL**: [https://portfolio-6y8h.vercel.app/](https://portfolio-6y8h.vercel.app/)
+- **Round 1 Rank**: 2,521st
+- **Round 2 Global Rank**: 3,636th
 
 ---
 
@@ -226,4 +116,4 @@ The portfolio is deployed on **Vercel**:
 
 - **GitHub**: [https://github.com/ankesh15](https://github.com/ankesh15)
 - **LinkedIn**: [https://www.linkedin.com/in/ankesh-singh-3b8b8728a/](https://www.linkedin.com/in/ankesh-singh-3b8b8728a/)
-- **Email**: [singhankesh672@gmail.com](mailto:singhankesh672@gmail.com)
+- **Email**: [ankeshsingh051@gmail.com](mailto:ankeshsingh051@gmail.com)

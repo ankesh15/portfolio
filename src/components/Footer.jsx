@@ -18,7 +18,7 @@ export const Footer = () => {
               Ankesh Singh
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400">
-              Full-Stack Developer · IIIT Agartala
+              AI & Full-Stack Developer · IIIT Agartala
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export const Footer = () => {
             </a>
 
             <a
-              href="mailto:singhankesh672@gmail.com"
+              href="mailto:ankeshsingh051@gmail.com"
               className="hover:text-indigo-600 dark:hover:text-white transition-colors flex items-center gap-1.5"
             >
               <Mail className="w-4 h-4" />

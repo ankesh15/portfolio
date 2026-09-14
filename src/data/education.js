@@ -13,18 +13,18 @@ export const educationData = [
       "Object-Oriented Programming (C++)",
       "Database Management Systems (DBMS)",
       "Operating Systems & Computer Networks",
-      "Full-Stack Web Development"
+      "Full-Stack Web Development & AI"
     ]
   },
   {
     id: 'amrit-public-school',
-    institution: "Amrit Public School",
+    institution: "Amrit Public School Mau, UP",
     shortName: "Amrit Public School",
     degree: "Senior Secondary (XII)",
     period: "2021 – 2022",
-    cgpa: "90.0%",
+    cgpa: "90%",
     status: "Completed",
-    location: "India",
+    location: "Mau, Uttar Pradesh, India",
     highlights: [
       "Physics, Chemistry & Mathematics (PCM)",
       "Computer Science Foundations"
@@ -38,7 +38,6 @@ export const achievementsData = [
     title: 'Meta Hacker Cup 2024 — Round 2 Qualifier',
     category: 'Competitive Programming',
     description: 'Advanced to Round 2 of Meta Hacker Cup 2024. Ranked 2,521st in Round 1 and 3,636th globally in Round 2.',
-    certificateUrl: 'https://www.facebook.com/codingcompetitions/hacker-cup/2024/certificate/855493433378513',
     year: '2024',
     highlight: true
   },
@@ -46,7 +45,7 @@ export const achievementsData = [
     id: 'leetcode-milestone',
     title: 'LeetCode — 715+ Problems & 1792 Peak Rating',
     category: 'Data Structures & Algorithms',
-    description: 'Solved over 715 algorithmic problems across arrays, dynamic programming, binary search, and trees with a peak contest rating of 1792+.',
+    description: 'Solved over 715 algorithmic problems across arrays, dynamic programming, binary search, trees, and graphs with a peak contest rating of 1792+.',
     year: 'Ongoing',
     highlight: true
   },
@@ -54,7 +53,7 @@ export const achievementsData = [
     id: 'codechef-milestone',
     title: 'CodeChef — 2-Star Coder (1424 Peak Rating)',
     category: 'Competitive Programming',
-    description: 'Achieved a peak contest rating of 1424 (2-Star) competing regularly in rated programming contests.',
+    description: 'Achieved a peak contest rating of 1424 (2-Star) competing regularly in rated global programming contests.',
     year: 'Ongoing',
     highlight: false
   },
@@ -62,7 +61,7 @@ export const achievementsData = [
     id: 'gssoc',
     title: 'GirlScript Summer of Code (GSSoC) Contributor',
     category: 'Open Source',
-    description: 'Contributed to open-source repositories by implementing features, resolving frontend bugs, enhancing documentation, and submitting code reviews.',
+    description: 'Contributed to open-source projects by implementing features, resolving issues, and collaborating through Git and GitHub.',
     year: '2024',
     highlight: false
   }

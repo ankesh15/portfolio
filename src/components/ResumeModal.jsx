@@ -2,11 +2,12 @@ import React from 'react';
 import { X, Download, FileText, ExternalLink } from 'lucide-react';
 import { educationData, achievementsData } from '../data/education';
 import { projectsData } from '../data/projects';
+import { experienceData } from '../data/experience';
 
 export const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
-  const mainEdu = educationData[0];
+  const bisExp = experienceData[0];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
@@ -18,7 +19,7 @@ export const ResumeModal = ({ isOpen, onClose }) => {
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
           <div className="flex items-center gap-2 text-slate-900 dark:text-white font-bold text-lg">
             <FileText className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-            <span>Ankesh Singh — Resume</span>
+            <span>Ankesh Singh — Resume Preview</span>
           </div>
 
           <button
@@ -35,9 +36,9 @@ export const ResumeModal = ({ isOpen, onClose }) => {
           <div className="border-b border-slate-200 dark:border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
               <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white">Ankesh Singh</h2>
-              <p className="text-indigo-600 dark:text-indigo-400 font-semibold">Full-Stack Developer</p>
+              <p className="text-indigo-600 dark:text-indigo-400 font-semibold">AI & Full-Stack Developer</p>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                singhankesh672@gmail.com · IIIT Agartala (CGPA: 8.52) · github.com/ankesh15
+                ankeshsingh051@gmail.com · IIIT Agartala (CGPA: 8.52) · github.com/ankesh15 · linkedin.com/in/ankesh-singh-3b8b8728a
               </p>
             </div>
 
@@ -52,19 +53,49 @@ export const ResumeModal = ({ isOpen, onClose }) => {
             </a>
           </div>
 
+          {/* Experience Section */}
+          <div>
+            <h3 className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">
+              Work Experience
+            </h3>
+            <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200/60 dark:border-slate-700/60 space-y-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <div>
+                  <h4 className="font-bold text-slate-900 dark:text-white">{bisExp.company}</h4>
+                  <p className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">{bisExp.role}</p>
+                </div>
+                <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2.5 py-1 rounded-md font-mono self-start sm:self-auto">
+                  {bisExp.period}
+                </span>
+              </div>
+              <ul className="list-disc list-inside space-y-1 text-xs text-slate-600 dark:text-slate-300 pt-1">
+                {bisExp.points.map((pt, i) => (
+                  <li key={i} className="leading-relaxed">{pt}</li>
+                ))}
+              </ul>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 pt-1">
+                <strong>Tech:</strong> {bisExp.tech.join(', ')}
+              </p>
+            </div>
+          </div>
+
           {/* Education */}
           <div>
             <h3 className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">Education</h3>
-            <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200/60 dark:border-slate-700/60 space-y-3">
-              <div className="flex justify-between items-start">
-                <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white">{mainEdu.institution}</h4>
-                  <p className="text-xs text-slate-600 dark:text-slate-300">{mainEdu.degree}</p>
+            <div className="space-y-2">
+              {educationData.map((edu) => (
+                <div key={edu.id} className="bg-slate-50 dark:bg-slate-800/50 p-3.5 rounded-xl border border-slate-200/60 dark:border-slate-700/60">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h4 className="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">{edu.institution}</h4>
+                      <p className="text-xs text-slate-600 dark:text-slate-300">{edu.degree}</p>
+                    </div>
+                    <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2 py-0.5 rounded font-mono shrink-0">
+                      {edu.period} · {edu.cgpa}
+                    </span>
+                  </div>
                 </div>
-                <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2.5 py-1 rounded-md font-mono">
-                  {mainEdu.period} · CGPA {mainEdu.cgpa}
-                </span>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -72,23 +103,32 @@ export const ResumeModal = ({ isOpen, onClose }) => {
           <div>
             <h3 className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">Technical Skills</h3>
             <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 text-xs leading-relaxed space-y-1.5">
-              <p><strong>Languages:</strong> C++, C, JavaScript, Python, Go</p>
-              <p><strong>Frontend Architecture:</strong> React.js, HTML5, CSS3, Tailwind CSS, Vite</p>
-              <p><strong>Backend & APIs:</strong> Node.js, Express.js, RESTful APIs, Socket.io</p>
-              <p><strong>Databases:</strong> MongoDB, MySQL, SQL, Mongoose ORM</p>
-              <p><strong>Tools & Systems:</strong> Git, GitHub, Linux Shell, Postman, VS Code</p>
+              <p><strong>AI & ML:</strong> RAG, LangGraph, Google Gemini, FastEmbed, Embeddings, Vector Search</p>
+              <p><strong>Languages:</strong> C++, C, JavaScript, Python</p>
+              <p><strong>Backend & APIs:</strong> FastAPI, Node.js, Express.js, REST APIs, Socket.io</p>
+              <p><strong>Databases:</strong> PostgreSQL, pgvector, MongoDB, MySQL, Mongoose</p>
+              <p><strong>Frontend:</strong> React.js, HTML5, CSS3, Tailwind CSS, Vite</p>
+              <p><strong>Cloud & DevOps:</strong> Docker, Railway, Vercel, GitHub Actions, Linux</p>
+              <p><strong>Tools:</strong> Git, GitHub, Postman, VS Code</p>
+              <p><strong>Core CS:</strong> Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks</p>
             </div>
           </div>
 
-          {/* Featured Projects */}
+          {/* Verified Projects */}
           <div>
             <h3 className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">Verified Projects</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {projectsData.map((p) => (
                 <div key={p.id} className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-                  <h4 className="font-bold text-slate-900 dark:text-white text-xs">{p.title}</h4>
+                  <div className="flex items-center justify-between gap-1">
+                    <h4 className="font-bold text-slate-900 dark:text-white text-xs">{p.title}</h4>
+                    <span className="text-[10px] font-semibold text-indigo-600 dark:text-indigo-400">{p.type}</span>
+                  </div>
                   <p className="text-[11px] text-indigo-600 dark:text-indigo-400 font-medium">{p.tagline}</p>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1">{p.description}</p>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-3 mt-1">{p.description}</p>
+                  <p className="text-[10px] text-slate-400 font-mono mt-2 truncate">
+                    Tech: {p.tech.slice(0, 5).join(', ')}...
+                  </p>
                 </div>
               ))}
             </div>

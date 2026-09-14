@@ -24,7 +24,7 @@ export const codingData = {
     {
       name: 'Meta Hacker Cup',
       rating: 'Round 2',
-      solved: 'Rank 2521 (R1) · 3636 (R2)',
+      solved: 'Rank 2,521 (R1) · 3,636 (R2)',
       metricLabel: '2024 Global Rank',
       badge: 'Round 2 Qualifier',
       url: 'https://github.com/ankesh15',

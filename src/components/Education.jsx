@@ -44,7 +44,7 @@ export const Education = () => {
                         <Calendar className="w-3.5 h-3.5" />
                         <span>{edu.period}</span>
                       </span>
-                      <span className="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/40 font-mono">
+                      <span className="px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800/40 font-mono">
                         {edu.cgpa}
                       </span>
                     </div>

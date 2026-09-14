@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Send, CheckCircle2, AlertCircle, Copy, Check, MapPin } from 'lucide-react';
+import { Mail, Send, CheckCircle2, AlertCircle, Copy, Check } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './UI/SocialIcons';
 
 export const Contact = () => {
@@ -9,7 +8,7 @@ export const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
-  const emailAddress = "singhankesh672@gmail.com";
+  const emailAddress = "ankeshsingh051@gmail.com";
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -94,7 +93,7 @@ export const Contact = () => {
                   className="p-2 text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-white rounded-lg hover:bg-white dark:hover:bg-slate-700 transition-colors shrink-0"
                   title="Copy Email"
                 >
-                  {copiedEmail ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
+                  {copiedEmail ? <Check className="w-4 h-4 text-indigo-500" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
 
@@ -138,8 +137,8 @@ export const Contact = () => {
               <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6">Send a Message</h3>
 
               {submitted ? (
-                <div className="p-6 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-center space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto">
+                <div className="p-6 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 text-center space-y-3">
+                  <div className="w-12 h-12 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <h4 className="text-lg font-bold text-slate-900 dark:text-white">Message Prepared!</h4>
@@ -148,7 +147,7 @@ export const Contact = () => {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 px-4 py-2 rounded-lg text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-700 transition-colors"
+                    className="mt-4 px-4 py-2 rounded-lg text-xs font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
                   >
                     Send Another Message
                   </button>

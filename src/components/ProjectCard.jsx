@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Check } from 'lucide-react';
+import { ExternalLink, Check, Sparkles } from 'lucide-react';
 import { GithubIcon } from './UI/SocialIcons';
 
 export const ProjectCard = ({ project, index }) => {
@@ -10,7 +10,11 @@ export const ProjectCard = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="group relative flex flex-col justify-between rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-500/40 transition-all duration-300 overflow-hidden text-left"
+      className={`group relative flex flex-col justify-between rounded-2xl bg-white dark:bg-slate-900/90 border shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden text-left ${
+        project.isPrimary
+          ? 'border-indigo-500/50 hover:border-indigo-500 ring-1 ring-indigo-500/20 shadow-indigo-500/5'
+          : 'border-slate-200 dark:border-slate-800 hover:border-indigo-500/40'
+      }`}
     >
       {/* Top Accent Gradient Line */}
       <div className={`h-1.5 bg-gradient-to-r ${project.accent || 'from-indigo-500 to-purple-500'}`} />
@@ -32,9 +36,17 @@ export const ProjectCard = ({ project, index }) => {
         <div>
           {/* Category Pill & Index */}
           <div className="flex items-center justify-between gap-2 mb-3">
-            <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800/40">
-              {project.type}
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800/40">
+                {project.type}
+              </span>
+              {project.isPrimary && (
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200/60 dark:border-purple-800/40">
+                  <Sparkles className="w-3 h-3 text-purple-600 dark:text-purple-400" />
+                  <span>Primary AI Project</span>
+                </span>
+              )}
+            </div>
             <span className="text-xs text-slate-400 font-mono">0{index + 1}</span>
           </div>
 
@@ -52,12 +64,12 @@ export const ProjectCard = ({ project, index }) => {
 
           {/* Key Features Bullet List */}
           <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800/80 space-y-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Verified Features</span>
-            <ul className="space-y-1.5 text-xs text-slate-600 dark:text-slate-300">
+            <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Key Features & Architecture</span>
+            <ul className="space-y-2 text-xs text-slate-600 dark:text-slate-300">
               {project.features.map((feature, fIdx) => (
-                <li key={fIdx} className="flex items-start gap-2">
-                  <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
-                  <span>{feature}</span>
+                <li key={fIdx} className="flex items-start gap-2.5">
+                  <Check className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
+                  <span className="leading-relaxed">{feature}</span>
                 </li>
               ))}
             </ul>

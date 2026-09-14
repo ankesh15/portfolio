@@ -5,8 +5,9 @@ import { GithubIcon, LinkedinIcon } from './UI/SocialIcons';
 
 const navItems = [
   { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Coding', href: '#coding' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },

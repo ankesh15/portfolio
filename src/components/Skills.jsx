@@ -1,14 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { skillCategories } from '../data/skills';
-import { Code2, Layout, Server, Database, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Code2, Layout, Server, Database, Sparkles, Cloud, Wrench, BookOpen, CheckCircle2 } from 'lucide-react';
 
 const iconMap = {
+  Sparkles: Sparkles,
   Code2: Code2,
-  Layout: Layout,
   Server: Server,
   Database: Database,
-  Sparkles: Sparkles
+  Layout: Layout,
+  Cloud: Cloud,
+  Wrench: Wrench,
+  BookOpen: BookOpen
 };
 
 export const Skills = () => {
@@ -26,7 +29,7 @@ export const Skills = () => {
         </div>
 
         {/* Grouped Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((group, idx) => {
             const IconComponent = iconMap[group.icon] || Code2;
             return (
@@ -35,34 +38,34 @@ export const Skills = () => {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: idx * 0.08 }}
-                className="p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-indigo-500/30 transition-all text-left flex flex-col justify-between"
+                transition={{ duration: 0.3, delay: idx * 0.05 }}
+                className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-indigo-500/30 transition-all text-left flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400">
-                      <IconComponent className="w-5 h-5" />
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <div className="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 shrink-0">
+                      <IconComponent className="w-4 h-4" />
                     </div>
-                    <h3 className="font-bold text-slate-900 dark:text-white text-lg">
+                    <h3 className="font-bold text-slate-900 dark:text-white text-base leading-tight">
                       {group.category}
                     </h3>
                   </div>
 
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mb-5">
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
                     {group.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5">
                     {group.skills.map((skill) => (
                       <span
                         key={skill.name}
-                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                        className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium transition-all ${
                           skill.highlight
                             ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/60'
                             : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/60 dark:border-slate-700/50'
                         }`}
                       >
-                        <CheckCircle2 className={`w-3.5 h-3.5 ${skill.highlight ? 'text-indigo-500' : 'text-slate-400'}`} />
+                        <CheckCircle2 className={`w-3 h-3 ${skill.highlight ? 'text-indigo-500' : 'text-slate-400'}`} />
                         <span>{skill.name}</span>
                         {skill.note && (
                           <span className="text-[10px] opacity-70 font-normal ml-0.5">({skill.note})</span>
