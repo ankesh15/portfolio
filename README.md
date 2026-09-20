@@ -32,10 +32,9 @@ My core focus centers on **AI Engineering** — particularly Retrieval-Augmented
 
 - **Responsive Layout**: Fluid design optimized across mobile (375px+), tablet, and desktop displays.
 - **Dark & Light Mode**: Theme toggling powered by React Context with `localStorage` state persistence.
-- **Smooth Scrolling Navigation**: Section linkage for seamless in-page scrolling including About, Experience, Projects, Skills, Coding, Education, and Contact.
+- **Smooth Scrolling Navigation**: Section linkage for seamless in-page scrolling including About, Projects, Skills, Coding, Education, and Contact.
 - **Hero Section**: Recruiter-focused introduction, quick social links, call-to-action buttons, and official PDF resume access.
 - **About Section**: Detailed background, academic metrics (8.52 CGPA), and primary focus areas (AI Engineering, Full-Stack Systems, DSA).
-- **Work Experience**: Industry software engineering internship at the Bureau of Indian Standards (BIS) featuring computer vision and real-time OCR testing systems.
 - **Featured Projects**: Verified AI knowledge assistant (ALEX) and full-stack MERN platform (Food Distribution Platform) with live deployment and repository links.
 - **Categorized Skills**: 8 structured matrices covering AI & ML, Languages, Backend & APIs, Databases, Frontend, Cloud & DevOps, Developer Tools, and Core CS.
 - **Competitive Programming & DSA**: Milestone cards featuring Meta Hacker Cup 2024, LeetCode (715+, 1792+), and CodeChef (1424+, 2-Star) statistics.
@@ -60,18 +59,6 @@ My core focus centers on **AI Engineering** — particularly Retrieval-Augmented
 - **JavaScript** (ES6+)
 - **Git & GitHub**
 - **Oxlint**
-
----
-
-## Featured Experience
-
-### Bureau of Indian Standards (BIS) — Software Engineering Intern
-*May 2026 – July 2026*
-- Developed a dual-camera computer vision system to automate monitoring of Lever Device tests for water bottles according to IS 17803, eliminating continuous manual observation during the 1,500-cycle, 70-minute test.
-- Implemented OCR-based real-time counter monitoring for machine cycle tracking and automated Pass/Fail decisions.
-- Built hinge and lid rupture detection using ROI-based image processing techniques to automatically identify test failures.
-- Created a multithreaded PyQt5 application with live monitoring, Pass/Fail alerts, and automated report generation.
-- **Technologies**: Python, PyQt5, OpenCV, Tesseract OCR, ReportLab, Multithreading.
 
 ---
 

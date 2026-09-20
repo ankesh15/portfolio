@@ -2,12 +2,9 @@ import React from 'react';
 import { X, Download, FileText, ExternalLink } from 'lucide-react';
 import { educationData, achievementsData } from '../data/education';
 import { projectsData } from '../data/projects';
-import { experienceData } from '../data/experience';
 
 export const ResumeModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
-
-  const bisExp = experienceData[0];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
@@ -51,32 +48,6 @@ export const ResumeModal = ({ isOpen, onClose }) => {
               <span>Open PDF</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
-          </div>
-
-          {/* Experience Section */}
-          <div>
-            <h3 className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">
-              Work Experience
-            </h3>
-            <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200/60 dark:border-slate-700/60 space-y-2">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                <div>
-                  <h4 className="font-bold text-slate-900 dark:text-white">{bisExp.company}</h4>
-                  <p className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">{bisExp.role}</p>
-                </div>
-                <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60 px-2.5 py-1 rounded-md font-mono self-start sm:self-auto">
-                  {bisExp.period}
-                </span>
-              </div>
-              <ul className="list-disc list-inside space-y-1 text-xs text-slate-600 dark:text-slate-300 pt-1">
-                {bisExp.points.map((pt, i) => (
-                  <li key={i} className="leading-relaxed">{pt}</li>
-                ))}
-              </ul>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 pt-1">
-                <strong>Tech:</strong> {bisExp.tech.join(', ')}
-              </p>
-            </div>
           </div>
 
           {/* Education */}
